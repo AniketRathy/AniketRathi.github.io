@@ -1,0 +1,1395 @@
+        </div>
+    </section>
+    
+    <!-- Contact & Links Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>CONTACT & IMPORTANT LINKS</h2>
+            
+            <div class="card-grid">
+                <div class="link-card">
+                    <h3>📧 Contact Information</h3>
+                    <p><strong>Email:</strong></p>
+                    <a href="mailto:aniket_2312ph02@iitp.ac.in">aniket_2312ph02@iitp.ac.in</a>
+                    <p style="margin-top: 1rem;"><strong>Date of Birth:</strong> June 9, 2002</p>
+                    <p><strong>Location:</strong> IIT Patna, Bihar, India</p>
+                </div>
+                
+                <div class="link-card">
+                    <h3>🔗 Professional Profiles</h3>
+                    <p><strong>LinkedIn:</strong></p>
+                    <a href="https://www.linkedin.com/in/aniketrathiphysics341592" target="_blank">linkedin.com/in/aniketrathiphysics341592</a>
+                    <p style="margin-top: 1rem;"><strong>Research Interests:</strong></p>
+                    <p>Surface-Enhanced Raman Spectroscopy, Biophotonics, Optical Microresonators</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Aniket Rathi. All rights reserved.</p>
+            <p>M.Sc. Physics Graduate | IIT Patna | Biophotonics Researcher</p>
+        </div>
+    </footer>
+
+    <script>
+        // Matrix Background Effect
+        function createMatrix() {
+            const matrixBg = document.getElementById('matrixBg');
+            const characters = '0123456789ABCDEFアイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+            
+            // Clear existing columns
+            matrixBg.innerHTML = '';
+            
+            const screenWidth = window.innerWidth;
+            const columnWidth = 25;
+            const columnCount = Math.floor(screenWidth / columnWidth);
+            
+            for (let i = 0; i < columnCount; i++) {
+                createMatrixColumn(i * columnWidth, matrixBg, characters);
+            }
+        }
+        
+        function createMatrixColumn(leftPosition, container, characters) {
+            const column = document.createElement('div');
+            column.className = 'matrix-column';
+            column.style.left = leftPosition + 'px';
+            
+            // Random duration between 8-15 seconds
+            const duration = Math.random() * 7 + 8;
+            column.style.animationDuration = duration + 's';
+            
+            // Random delay between 0-10 seconds
+            const delay = Math.random() * 10;
+            column.style.animationDelay = delay + 's';
+            
+            // Create random string of characters
+            let text = '';
+            const stringLength = Math.floor(Math.random() * 20) + 10;
+            
+            for (let j = 0; j < stringLength; j++) {
+                text += characters[Math.floor(Math.random() * characters.length)] + '\n';
+            }
+            
+            column.textContent = text;
+            container.appendChild(column);
+        }
+        
+        // Initialize Matrix effect
+        createMatrix();
+        
+        //<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniket Rathi - M.Sc. Physics | Biophotonics Researcher | IIT Patna</title>
+    <meta name="description" content="Aniket Rathi - M.Sc. Physics graduate from IIT Patna specializing in Biophotonics, SERS, and Optical Microresonators. Research experience in Raman Spectroscopy and COMSOL simulations.">
+    <meta name="keywords" content="Aniket Rathi, Physics, Biophotonics, SERS, Raman Spectroscopy, IIT Patna, Optical Microresonators, Research, M.Sc Physics">
+    <meta name="author" content="Aniket Rathi">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Aniket Rathi - Biophotonics Researcher | IIT Patna">
+    <meta property="og:description" content="M.Sc. Physics graduate specializing in Surface-Enhanced Raman Spectroscopy and Optical Microresonators">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aniket Rathi - Biophotonics Researcher">
+    <meta name="twitter:description" content="M.Sc. Physics graduate from IIT Patna specializing in Biophotonics and SERS research">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Orbitron', monospace;
+            background: #0a0a0a;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Animated Background with Optics */
+        .optics-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at 20% 50%, rgba(255,0,0,0.1) 0%, transparent 30%),
+                        radial-gradient(circle at 80% 30%, rgba(0,255,0,0.1) 0%, transparent 30%),
+                        radial-gradient(circle at 60% 80%, rgba(0,0,255,0.1) 0%, transparent 30%);
+        }
+        
+        /* Laser Beam Animation */
+        .laser-container {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .laser-beam {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, #ff0000, #ff6600, #ffff00);
+            box-shadow: 0 0 10px #ff0000;
+            animation: laserPulse 3s infinite;
+        }
+        
+        .laser-1 {
+            top: 20%;
+            left: 10%;
+            width: 30%;
+            transform: rotate(15deg);
+            animation-delay: 0s;
+        }
+        
+        .laser-2 {
+            top: 60%;
+            right: 10%;
+            width: 25%;
+            transform: rotate(-20deg);
+            background: linear-gradient(90deg, #00ff00, #00ffff, #0066ff);
+            box-shadow: 0 0 10px #00ff00;
+            animation-delay: 1s;
+        }
+        
+        .laser-3 {
+            top: 40%;
+            left: 50%;
+            width: 35%;
+            transform: rotate(5deg);
+            background: linear-gradient(90deg, #ff00ff, #6600ff, #0000ff);
+            box-shadow: 0 0 10px #ff00ff;
+            animation-delay: 2s;
+        }
+        
+        /* Cuvette Animation */
+        .cuvette {
+            position: absolute;
+            width: 40px;
+            height: 60px;
+            border: 2px solid #ffffff;
+            background: rgba(100, 200, 255, 0.3);
+            top: 30%;
+            left: 45%;
+            animation: cuvetteGlow 4s infinite;
+        }
+        
+        .cuvette::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            background: linear-gradient(45deg, rgba(255,0,0,0.2), rgba(0,255,0,0.2), rgba(0,0,255,0.2));
+            animation: liquidSwirl 6s infinite;
+        }
+        
+        /* Prism Animation */
+        .prism {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 50px solid rgba(255, 255, 255, 0.3);
+            top: 70%;
+            left: 20%;
+            animation: prismRotate 8s infinite;
+        }
+        
+        /* Spectrum Dispersal */
+        .spectrum-ray {
+            position: absolute;
+            height: 1px;
+            width: 100px;
+            top: 72%;
+            left: 22%;
+            transform-origin: 0 0;
+            animation: spectrumDisperse 4s infinite;
+        }
+        
+        .spectrum-ray:nth-child(1) { background: #ff0000; transform: rotate(10deg); animation-delay: 0s; }
+        .spectrum-ray:nth-child(2) { background: #ff6600; transform: rotate(15deg); animation-delay: 0.2s; }
+        .spectrum-ray:nth-child(3) { background: #ffff00; transform: rotate(20deg); animation-delay: 0.4s; }
+        .spectrum-ray:nth-child(4) { background: #00ff00; transform: rotate(25deg); animation-delay: 0.6s; }
+        .spectrum-ray:nth-child(5) { background: #0066ff; transform: rotate(30deg); animation-delay: 0.8s; }
+        .spectrum-ray:nth-child(6) { background: #4400ff; transform: rotate(35deg); animation-delay: 1s; }
+        .spectrum-ray:nth-child(7) { background: #ff00ff; transform: rotate(40deg); animation-delay: 1.2s; }
+        
+        /* Mirror Reflections */
+        .mirror {
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            border-radius: 2px;
+            animation: mirrorShine 5s infinite;
+        }
+        
+        .mirror-1 {
+            top: 25%;
+            right: 30%;
+            transform: rotate(45deg);
+        }
+        
+        .mirror-2 {
+            top: 55%;
+            left: 30%;
+            transform: rotate(-30deg);
+            animation-delay: 2s;
+        }
+        
+        /* Navigation with VIBGYOR Spectrum */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            padding: 1rem 0;
+            border-bottom: 2px solid transparent;
+            background-image: linear-gradient(90deg, 
+                rgba(148, 0, 211, 0.3) 0%,
+                rgba(75, 0, 130, 0.3) 16.66%,
+                rgba(0, 0, 255, 0.3) 33.33%,
+                rgba(0, 255, 0, 0.3) 50%,
+                rgba(255, 255, 0, 0.3) 66.66%,
+                rgba(255, 165, 0, 0.3) 83.33%,
+                rgba(255, 0, 0, 0.3) 100%);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 0;
+        }
+        
+        .nav-links li {
+            flex: 1;
+        }
+        
+        .nav-links a {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        /* VIBGYOR Color Scheme for Navigation */
+        .nav-links li:nth-child(1) a { color: #9400d3; border-color: #9400d3; } /* Violet - Research */
+        .nav-links li:nth-child(2) a { color: #4b0082; border-color: #4b0082; } /* Indigo - Gallery */
+        .nav-links li:nth-child(3) a { color: #0000ff; border-color: #0000ff; } /* Blue - Education */
+        .nav-links li:nth-child(4) a { color: #00ff00; border-color: #00ff00; } /* Green - Transcripts */
+        .nav-links li:nth-child(5) a { color: #ffff00; border-color: #ffff00; } /* Yellow - Hobbies */
+        .nav-links li:nth-child(6) a { color: #ff0000; border-color: #ff0000; } /* Red - Awards */
+        
+        .nav-links a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .section {
+            min-height: 100vh;
+            padding: 6rem 0;
+            position: relative;
+        }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 4s ease-in-out infinite;
+        }
+        
+        .hero-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #66ccff;
+            text-shadow: 0 0 10px #66ccff;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            color: #cccccc;
+        }
+        
+        .profile-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            animation: gradientShift 5s ease-in-out infinite, profileGlow 3s ease-in-out infinite alternate;
+            padding: 4px;
+        }
+        
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        /* Buttons with Spectrum Colors */
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: 2px solid;
+            text-decoration: none;
+            margin: 0.5rem;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', monospace;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+        
+        .btn-primary {
+            border-color: #00ff00;
+            color: #00ff00;
+        }
+        
+        .btn-secondary {
+            border-color: #ff6600;
+            color: #ff6600;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary:hover {
+            background: #00ff00;
+            color: #000;
+            box-shadow: 0 10px 25px rgba(0, 255, 0, 0.4);
+        }
+        
+        .btn-secondary:hover {
+            background: #ff6600;
+            color: #fff;
+            box-shadow: 0 10px 25px rgba(255, 102, 0, 0.4);
+        }
+        
+        /* Cards with Optics Theme */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            margin: 1rem 0;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0;
+            animation: gradientShift 6s ease-in-out infinite;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card:hover::before {
+            opacity: 0.7;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+        }
+        
+        .card h3 {
+            color: #66ccff;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            text-shadow: 0 0 10px #66ccff;
+        }
+        
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        /* Timeline with Laser Effects */
+        .timeline {
+            position: relative;
+            margin: 3rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(180deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .timeline-item:nth-child(odd) {
+            margin-right: 52%;
+        }
+        
+        .timeline-item:nth-child(even) {
+            margin-left: 52%;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background: radial-gradient(circle, #ffffff, #66ccff);
+            border-radius: 50%;
+            top: 50%;
+            box-shadow: 0 0 15px #66ccff;
+            animation: timelinePulse 2s infinite;
+        }
+        
+        .timeline-item:nth-child(odd)::before {
+            right: -65px;
+        }
+        
+        .timeline-item:nth-child(even)::before {
+            left: -65px;
+        }
+        
+        /* Gallery with Spectral Effects */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .gallery-item {
+            aspect-ratio: 1;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid transparent;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            border-radius: 15px;
+            z-index: -1;
+            opacity: 0;
+            animation: gradientShift 4s ease-in-out infinite;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover::before {
+            opacity: 0.8;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.05) rotateY(10deg);
+            box-shadow: 0 15px 35px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Section Headers with Spectral Effect */
+        .section h2 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ff0000, #ff6600, #ffff00, #00ff00, #0066ff, #4400ff, #ff00ff);
+            background-size: 400% 400%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 5s ease-in-out infinite;
+        }
+        
+        /* Awards Section Special Styling */
+        .award-item {
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        
+        .award-item:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+        
+        .award-item h4 {
+            color: #ffd700;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Skills with Wavelength Colors */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .skill-item {
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid transparent;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .skill-item:nth-child(7n+1) { border-color: #9400d3; }
+        .skill-item:nth-child(7n+2) { border-color: #4b0082; }
+        .skill-item:nth-child(7n+3) { border-color: #0000ff; }
+        .skill-item:nth-child(7n+4) { border-color: #00ff00; }
+        .skill-item:nth-child(7n+5) { border-color: #ffff00; }
+        .skill-item:nth-child(7n+6) { border-color: #ff6600; }
+        .skill-item:nth-child(7n+7) { border-color: #ff0000; }
+        
+        .skill-item:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.15);
+        }
+        
+        /* Links Grid */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .link-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .link-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(255, 255, 255, 0.15);
+            border-color: #66ccff;
+        }
+        
+        .link-card a {
+            color: #66ccff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .link-card a:hover {
+            text-shadow: 0 0 10px #66ccff;
+        }
+        
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid transparent;
+            background-image: linear-gradient(90deg, 
+                rgba(148, 0, 211, 0.5) 0%,
+                rgba(75, 0, 130, 0.5) 16.66%,
+                rgba(0, 0, 255, 0.5) 33.33%,
+                rgba(0, 255, 0, 0.5) 50%,
+                rgba(255, 255, 0, 0.5) 66.66%,
+                rgba(255, 165, 0, 0.5) 83.33%,
+                rgba(255, 0, 0, 0.5) 100%);
+        }
+        
+        /* Animations */
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes laserPulse {
+            0%, 100% { opacity: 0.3; transform: scaleX(1); }
+            50% { opacity: 1; transform: scaleX(1.1); }
+        }
+        
+        @keyframes cuvetteGlow {
+            0%, 100% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(100, 200, 255, 0.8); }
+        }
+        
+        @keyframes liquidSwirl {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        
+        @keyframes prismRotate {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(180deg); }
+        }
+        
+        @keyframes spectrumDisperse {
+            0% { opacity: 0; transform: scaleX(0); }
+            50% { opacity: 1; transform: scaleX(1); }
+            100% { opacity: 0.7; transform: scaleX(1.2); }
+        }
+        
+        @keyframes mirrorShine {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.9); }
+        }
+        
+        @keyframes profileGlow {
+            from { filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.3)); }
+            to { filter: drop-shadow(0 0 40px rgba(255, 255, 255, 0.6)); }
+        }
+        
+        @keyframes timelinePulse {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
+        }
+        
+        /* Mobile Responsivity */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .profile-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+            
+            .nav-links a {
+                font-size: 0.8rem;
+                padding: 0.8rem 1rem;
+            }
+            
+            .timeline-item:nth-child(odd),
+            .timeline-item:nth-child(even) {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-item::before {
+                left: 10px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Optics Background -->
+    <div class="optics-background"></div>
+    
+    <!-- Laser and Optical Elements -->
+    <div class="laser-container">
+        <!-- Laser Beams -->
+        <div class="laser-beam laser-1"></div>
+        <div class="laser-beam laser-2"></div>
+        <div class="laser-beam laser-3"></div>
+        
+        <!-- Cuvette -->
+        <div class="cuvette"></div>
+        
+        <!-- Prism with Spectrum Dispersal -->
+        <div class="prism"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        <div class="spectrum-ray"></div>
+        
+        <!-- Mirrors -->
+        <div class="mirror mirror-1"></div>
+        <div class="mirror mirror-2"></div>
+    </div>
+    
+    <!-- Navigation with VIBGYOR Spectrum -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">ANIKET RATHI</div>
+            <ul class="nav-links">
+                <li><a href="#research">RESEARCH</a></li>
+                <li><a href="#gallery">GALLERY</a></li>
+                <li><a href="#education">EDUCATION</a></li>
+                <li><a href="#transcripts">TRANSCRIPTS</a></li>
+                <li><a href="#hobbies">HOBBIES</a></li>
+                <li><a href="#awards">AWARDS</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>ANIKET RATHI</h1>
+                    <h2>M.Sc. Physics | Biophotonics Researcher</h2>
+                    <p>Passionate physicist specializing in Surface-Enhanced Raman Spectroscopy (SERS), Whispering Gallery Mode Resonators, and Biophotonics. Currently pursuing advanced research in optical microresonators and biosensing applications.</p>
+                    <a href="#research" class="btn btn-primary">EXPLORE RESEARCH</a>
+                    <a href="mailto:aniket_2312ph02@iitp.ac.in" class="btn btn-secondary">CONTACT ME</a>
+                </div>
+                <div class="profile-image">
+                    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='350' height='350' viewBox='0 0 350 350'%3E%3Cdefs%3E%3CradialGradient id='grad1' cx='50%25' cy='30%25'%3E%3Cstop offset='0%25' stop-color='%23ffffff'/%3E%3Cstop offset='100%25' stop-color='%23cccccc'/%3E%3C/radialGradient%3E%3C/defs%3E%3Ccircle cx='175' cy='175' r='170' fill='url(%23grad1)'/%3E%3Ctext x='175' y='190' text-anchor='middle' fill='%23333' font-family='Orbitron' font-size='28' font-weight='bold'%3EANIKET%3C/text%3E%3C/svg%3E" alt="Aniket Rathi">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <h2>RESEARCH EXPERIENCE</h2>
+            
+            <div class="card">
+                <h3>M.Sc. Research Project in Biophotonics</h3>
+                <p><strong>Development of Raman spectrometer and COMSOL simulations on photonic Micro-resonators for estimating the Raman Signal enhancement and Bio-sensing</strong></p>
+                <p><strong>Supervisor:</strong> <a href="https://dantham.wixsite.com/mysite-1" target="_blank" style="color: #66ccff;">Dr. Venkata R. Dantham</a></p>
+                
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>🔬 Raman Spectrometer Development</h3>
+                        <p>• Developed custom-built Raman spectrometer using existing laboratory facilities</p>
+                        <p>• Optimized signals using various optics (lenses, lasers, spectrometers)</p>
+                        <p>• Demonstrated spectroscopy for liquid samples with enhanced sensitivity</p>
+                        <p>• Achieved signal enhancement from 500 to 50,000 intensity units</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>⚡ Nanoparticle Synthesis & SERS</h3>
+                        <p>• Synthesized Au, Ag nanoparticles using wet-chemistry method</p>
+                        <p>• Demonstrated Raman signal enhancement for dye samples and proteins</p>
+                        <p>• Achieved fluorescence quenching using plasmonic nanoparticles</p>
+                        <p>• Studied BSA protein samples with various nanoparticle concentrations</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>💻 COMSOL Multiphysics Simulations</h3>
+                        <p>• Simulated whispering gallery mode (WGM) microresonators</p>
+                        <p>• Optimized radius and medium for enhanced signal amplification</p>
+                        <p>• Modeled hybrid resonator systems with integrated nanoparticles</p>
+                        <p>• Analyzed scattering cross-sections of various geometries</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🧬 Biosensing Applications</h3>
+                        <p>• Simulated sensing environment using WGM resonators</p>
+                        <p>• Analyzed various size analytes based on transmission dips</p>
+                        <p>• Developed models for gas detection (CO, SO₂, H₂S)</p>
+                        <p>• Achieved sensitivity for biomolecule detection at nano-scale</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Research Interests & Future Goals</h3>
+                <div class="skills-grid">
+                    <div class="skill-item">Surface-Enhanced Raman Spectroscopy (SERS)</div>
+                    <div class="skill-item">Coherent Anti-Stokes Raman Scattering (CARS)</div>
+                    <div class="skill-item">Biosensing & Biophotonics</div>
+                    <div class="skill-item">Biomedical Imaging</div>
+                    <div class="skill-item">Ultrafast Lasers & Nonlinear Optics</div>
+                    <div class="skill-item">Whispering Gallery Mode Resonators</div>
+                    <div class="skill-item">Quantum Optics & Photonics</div>
+                    <div class="skill-item">Hybrid Microresonator Systems</div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Technical Expertise</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Laboratory Equipment</h3>
+                        <p>• Andor Solaris 64-bit High Sensitivity Spectrometer</p>
+                        <p>• QE-PRO Ocean View Optics High Resolution Spectrometer</p>
+                        <p>• Various optical components and laser systems (532nm, NIR)</p>
+                        <p>• Wet-chemistry synthesis techniques for nanoparticles</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Simulation & Modeling</h3>
+                        <p>• COMSOL Multiphysics (Version 6.1)</p>
+                        <p>• Electromagnetic wave simulations</p>
+                        <p>• WGM mode analysis and optimization</p>
+                        <p>• Boundary mode analysis for resonator design</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Programming & Data Analysis</h3>
+                        <p>• Python (Advanced Certification - Kaggle)</p>
+                        <p>• Origin Pro for spectral analysis</p>
+                        <p>• MySQL for database management</p>
+                        <p>• Java for scientific computing</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Advanced Coursework</h3>
+                        <p>• Biophotonics & Applied Optics</p>
+                        <p>• Medical Physics & Quantum Optics</p>
+                        <p>• Physics of Ultra-Cold Atoms</p>
+                        <p>• Advanced Measurement Techniques</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Gallery Section -->
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>RESEARCH GALLERY</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.2rem; color: #cccccc;">Visual documentation of research work, experimental setups, and scientific achievements</p>
+            
+            <div class="gallery">
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">🔬</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">Raman Spectrometer Setup</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">📊</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">Spectral Analysis Results</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">🧪</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">Nanoparticle Synthesis</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">💎</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">WGM Microresonators</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">🌊</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">COMSOL Simulations</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">⚡</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">SERS Enhancement</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">🔍</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">Biosensing Applications</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div style="text-align: center;">
+                        <div style="font-size: 3rem;">📈</div>
+                        <p style="font-size: 1rem; margin-top: 1rem;">Research Data Analysis</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #66ccff; font-size: 1.1rem;">
+                    <strong>Research Images Available:</strong><br>
+                    • Experimental setup photographs<br>
+                    • Raman spectra of various samples (CCl₄, Benzene, BSA protein)<br>
+                    • COMSOL simulation results and visualizations<br>
+                    • Nanoparticle characterization images<br>
+                    • WGM mode analysis graphs<br>
+                    • SERS enhancement demonstrations
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2>EDUCATION</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h3>Master of Science (M.Sc.) in Physics</h3>
+                    <p><strong>Indian Institute of Technology, Patna</strong></p>
+                    <p><strong>2023 – 2025 | CPI: 7.78/10.0</strong></p>
+                    <p><strong>Supervisor:</strong> <a href="https://dantham.wixsite.com/mysite-1" target="_blank" style="color: #66ccff;">Dr. Venkata R. Dantham</a></p>
+                    <p><strong>Research Focus:</strong> Biophotonics, Surface-Enhanced Raman Spectroscopy, Optical Microresonators</p>
+                    <p><strong>Thesis:</strong> Development of Raman spectrometer and COMSOL simulations on photonic micro-resonators for estimating Raman enhancement and bio-sensing</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Bachelor of Science (B.Sc.) in Physical Science</h3>
+                    <p><strong>University of Delhi - Rajdhani College</strong></p>
+                    <p><strong>2020 - 2023 | CGPA: 8.318/10.0 (First Division with Distinction)</strong></p>
+                    <p><strong>Major:</strong> Physical Science with Computer Science</p>
+                    <p><strong>Relevant Coursework:</strong> Mechanics, Electricity & Magnetism, Thermal Physics, Wave & Optics, Modern Physics, Solid State Physics, Database Management, Data Analysis using Python</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Higher Secondary Education (Class 12)</h3>
+                    <p><strong>Scottish International School, CBSE Board</strong></p>
+                    <p><strong>2020 | 93.6% (Top 2% students of district)</strong></p>
+                    <p><strong>Subjects:</strong> Physics, Chemistry, Mathematics, English, Physical Education</p>
+                    <p><strong>Achievement:</strong> District topper in Physics</p>
+                </div>
+                
+                <div class="timeline-item">
+                    <h3>Secondary Education (Class 10)</h3>
+                    <p><strong>St. Francis School, ICSE Board</strong></p>
+                    <p><strong>2018 | 90.3% (Top 1% students of district)</strong></p>
+                    <p><strong>Achievement:</strong> Excellent performance in Mathematics and Science subjects</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Transcripts Section -->
+    <section id="transcripts" class="section">
+        <div class="container">
+            <h2>ACADEMIC TRANSCRIPTS</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🎓 Master's Degree (M.Sc. Physics)</h3>
+                    <p><strong>Indian Institute of Technology, Patna</strong></p>
+                    <p><strong>CPI: 7.78/10.0</strong></p>
+                    <p><strong>Status:</strong> Completed (May 2025)</p>
+                    <p><strong>Provisional Certificate:</strong> Issued June 18, 2025</p>
+                    <p><strong>Final Result:</strong> Declared May 16, 2025</p>
+                    <p>Degree to be conferred at 12th Convocation</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🎓 Bachelor's Degree (B.Sc. Physical Science)</h3>
+                    <p><strong>University of Delhi</strong></p>
+                    <p><strong>CGPA: 8.318/10.0</strong></p>
+                    <p><strong>Final Percentage:</strong> 83.18%</p>
+                    <p><strong>Division:</strong> First Division with Distinction</p>
+                    <p><strong>Result Declared:</strong> July 12, 2023</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📊 Semester-wise Academic Performance</h3>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Semester I & II</h3>
+                        <p>• <strong>SGPA:</strong> 9.18, 9.73</p>
+                        <p>• Outstanding performance in Core Physics subjects</p>
+                        <p>• Mechanics: A+, Electricity & Magnetism: O</p>
+                        <p>• Strong foundation in Mathematical Physics</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Semester III & IV</h3>
+                        <p>• <strong>SGPA:</strong> 8.73, 7.36</p>
+                        <p>• Thermal Physics & Statistical Mechanics: A</p>
+                        <p>• Wave & Optics: B+ (Specialization interest developed)</p>
+                        <p>• Advanced programming skills in Python and C++</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Semester V & VI</h3>
+                        <p>• <strong>SGPA:</strong> 7.27, 7.64</p>
+                        <p>• Modern Physics: B (Foundation for research)</p>
+                        <p>• Solid State Physics: B+ (Material science focus)</p>
+                        <p>• Data Structures & Computer Networks: A</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🏆 Grade Distribution Analysis</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                    <div style="text-align: center; padding: 1rem; background: rgba(255, 215, 0, 0.1); border-radius: 10px;">
+                        <strong style="color: #ffd700;">Outstanding (O)</strong><br>
+                        <span style="font-size: 2rem;">6</span><br>
+                        subjects
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: rgba(0, 255, 0, 0.1); border-radius: 10px;">
+                        <strong style="color: #00ff00;">Excellent (A+)</strong><br>
+                        <span style="font-size: 2rem;">8</span><br>
+                        subjects
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: rgba(0, 150, 255, 0.1); border-radius: 10px;">
+                        <strong style="color: #0096ff;">Very Good (A)</strong><br>
+                        <span style="font-size: 2rem;">6</span><br>
+                        subjects
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: rgba(255, 165, 0, 0.1); border-radius: 10px;">
+                        <strong style="color: #ffa500;">Good (B+)</strong><br>
+                        <span style="font-size: 2rem;">4</span><br>
+                        subjects
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hobbies Section -->
+    <section id="hobbies" class="section">
+        <div class="container">
+            <h2>HOBBIES & EXTRACURRICULAR ACTIVITIES</h2>
+            
+            <div class="card-grid">
+                <div class="card">
+                    <h3>🏸 Sports Excellence</h3>
+                    <h4>Badminton</h4>
+                    <p>• <strong>State-level representation</strong></p>
+                    <p>• Multiple medals won at IIT Patna competitions</p>
+                    <p>• Active participant in inter-departmental tournaments</p>
+                    <p>• Demonstrates strategic thinking and quick reflexes</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Volleyball</h4>
+                    <p>• <strong>District-level representation</strong></p>
+                    <p>• Team captain for several IIT Patna matches</p>
+                    <p>• Excellent teamwork and leadership skills</p>
+                    <p>• Won gold medal in inter-hostel championship</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Table Tennis</h4>
+                    <p>• <strong>District-level representation</strong></p>
+                    <p>• Consistent performer in IIT competitions</p>
+                    <p>• Quick decision-making and precision skills</p>
+                    <p>• Regular practice maintains physical fitness</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🔬 Academic Clubs & Societies</h3>
+                    <h4>Particle Physics Society, IIT Patna</h4>
+                    <p>• Active member since 2023</p>
+                    <p>• Participated in seminars on advanced physics topics</p>
+                    <p>• Contributed to discussions on quantum field theory</p>
+                    <p>• Organized workshops for junior students</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Astronomy Club, IIT Patna</h4>
+                    <p>• Member since 2024</p>
+                    <p>• Participated in night sky observations</p>
+                    <p>• Contributed to astrophotography projects</p>
+                    <p>• Helped organize public astronomy events</p>
+                </div>
+                
+                <div class="card">
+                    <h3>💻 Technical Interests</h3>
+                    <h4>Scientific Programming</h4>
+                    <p>• Advanced Python programming for data analysis</p>
+                    <p>• Development of simulation tools using COMSOL</p>
+                    <p>• Database management and optimization</p>
+                    <p>• Web technologies and scientific visualization</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Research Methodology</h4>
+                    <p>• Literature review and scientific writing</p>
+                    <p>• Experimental design and data interpretation</p>
+                    <p>• Statistical analysis and error propagation</p>
+                    <p>• Conference presentation skills</p>
+                </div>
+                
+                <div class="card">
+                    <h3>🎯 Personal Development</h3>
+                    <h4>Leadership & Organization</h4>
+                    <p>• Team coordination in sports competitions</p>
+                    <p>• Workshop organization for academic clubs</p>
+                    <p>• Mentoring junior students in physics concepts</p>
+                    <p>• Time management across multiple activities</p>
+                    
+                    <h4 style="margin-top: 1.5rem;">Communication Skills</h4>
+                    <p>• Scientific presentation and public speaking</p>
+                    <p>• Technical documentation and report writing</p>
+                    <p>• Cross-cultural communication with international collaborators</p>
+                    <p>• Teaching and knowledge dissemination</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🌟 Achievements Summary</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(255, 215, 0, 0.1); border: 2px solid #ffd700; border-radius: 10px;">
+                        <div style="font-size: 2.5rem; color: #ffd700;">🏆</div>
+                        <strong>Sports Medals</strong><br>
+                        <span style="font-size: 1.5rem; color: #ffd700;">15+</span><br>
+                        Across three sports
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(0, 255, 0, 0.1); border: 2px solid #00ff00; border-radius: 10px;">
+                        <div style="font-size: 2.5rem; color: #00ff00;">🎯</div>
+                        <strong>Leadership Roles</strong><br>
+                        <span style="font-size: 1.5rem; color: #00ff00;">5+</span><br>
+                        Team captain positions
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: rgba(0, 150, 255, 0.1); border: 2px solid #0096ff; border-radius: 10px;">
+                        <div style="font-size: 2.5rem; color: #0096ff;">🔬</div>
+                        <strong>Club Memberships</strong><br>
+                        <span style="font-size: 1.5rem; color: #0096ff;">2</span><br>
+                        Active academic societies
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Awards Section -->
+    <section id="awards" class="section">
+        <div class="container">
+            <h2>AWARDS & ACHIEVEMENTS</h2>
+            
+            <div class="card-grid">
+                <div class="award-item">
+                    <h4>🏆 Merit Cum Means (MCM) Scholarship</h4>
+                    <p><strong>Indian Institute of Technology Patna</strong></p>
+                    <p>Full financial support for M.Sc. studies (2023-2025)</p>
+                    <p>Awarded based on academic merit and financial need assessment</p>
+                </div>
+                
+                <div class="award-item">
+                    <h4>🎓 STSE Scholarship</h4>
+                    <p><strong>State Government Scholarship</strong></p>
+                    <p>Complete fee waiver for senior secondary education</p>
+                    <p>Recognition for outstanding academic performance</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🧪 National Level Competitive Examinations</h3>
+                <div class="card-grid">
+                    <div class="award-item">
+                        <h4>IIT-JAM 2023 (Physics)</h4>
+                        <p><strong>All India Rank: 796</strong></p>
+                        <p>Joint Admission Test for Masters</p>
+                        <p>Qualified for admission in M.Sc. programs at IITs and NITs across India</p>
+                        <p>Demonstrates strong conceptual understanding in physics</p>
+                    </div>
+                    
+                    <div class="award-item">
+                        <h4>GATE 2024 (Physics)</h4>
+                        <p><strong>All India Rank: 1404</strong></p>
+                        <p>Graduate Aptitude Test in Engineering</p>
+                        <p>Qualified for admission in M.Tech and Ph.D. programs at IITs</p>
+                        <p>Valid for PSU recruitments and research fellowships</p>
+                    </div>
+                    
+                    <div class="award-item">
+                        <h4>CUET-PG 2023</h4>
+                        <p><strong>Successfully Qualified</strong></p>
+                        <p>Common University Entrance Test - Post Graduate</p>
+                        <p>Eligible for admissions in central universities across India</p>
+                        <p>Comprehensive evaluation of subject knowledge</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>💻 Professional Certifications</h3>
+                <div class="card-grid">
+                    <div class="award-item">
+                        <h4>Advanced Course on Python</h4>
+                        <p><strong>Kaggle Certification</strong></p>
+                        <p>Advanced programming skills in Python for data science</p>
+                        <p>Demonstrated proficiency in scientific computing libraries</p>
+                        <p>Applied knowledge in research data analysis</p>
+                    </div>
+                    
+                    <div class="award-item">
+                        <h4>Workshop Participation</h4>
+                        <p><strong>Optics, Photonics, and Quantum Optics</strong></p>
+                        <p>IIT Patna, 2023 - National Level Workshop</p>
+                        <p>Advanced training in cutting-edge optical technologies</p>
+                        <p>Networking with leading researchers in the field</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>🏅 Sports & Leadership Awards</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div class="award-item">
+                        <h4>🏸 Badminton Excellence</h4>
+                        <p>• State-level representation certificate</p>
+                        <p>• Multiple gold medals at IIT Patna competitions</p>
+                        <p>• Inter-department championship winner</p>
+                        <p>• Consistent performer across tournaments</p>
+                    </div>
+                    
+                    <div class="award-item">
+                        <h4>🏐 Volleyball Leadership</h4>
+                        <p>• District-level representation certificate</p>
+                        <p>• Team captain for multiple seasons</p>
+                        <p>• Inter-hostel championship gold medalist</p>
+                        <p>• Outstanding teamwork and leadership recognition</p>
+                    </div>
+                    
+                    <div class="award-item">
+                        <h4>🏓 Table Tennis Achievement</h4>
+                        <p>• District-level competition participant</p>
+                        <p>• Several medals in IIT competitions</p>
+                        <p>• Consistent top-3 finisher in tournaments</p>
+                        <p>• Excellent sportsmanship award recipient</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>📈 Academic Excellence Timeline</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin: 2rem 0; flex-wrap: wrap; gap: 1rem;">
+                    <div style="text-align: center; min-width: 200px;">
+                        <div style="font-size: 2rem; color: #ff0000;">2018</div>
+                        <strong>Class 10: 90.3%</strong><br>
+                        Top 1% in district
+                    </div>
+                    <div style="text-align: center; min-width: 200px;">
+                        <div style="font-size: 2rem; color: #ff6600;">2020</div>
+                        <strong>Class 12: 93.6%</strong><br>
+                        Top 2% in district
+                    </div>
+                    <div style="text-align: center; min-width: 200px;">
+                        <div style="font-size: 2rem; color: #00ff00;">2023</div>
+                        <strong>B.Sc.: 8.318 CGPA</strong><br>
+                        First Division with Distinction
+                    </div>
+                    <div style="text-align: center; min-width: 200px;">
+                        <div style="font-size: 2rem; color: #0066ff;">2025</div>
+                        <strong>M.Sc.: 7.78 CPI</strong><br>
+                        IIT Patna
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact & Links Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>CONTACT & IMPORTANT LINKS</h2>
+            
+            <div class="card-grid">
+                <div class="link-card">
+                    <h3>📧 Contact Information</h3>
+                    <p><strong>Email:</strong></p>
+                    <a href="mailto:aniket_2312ph02@iitp.ac.in">aniket_2312ph02@iitp.ac.in</a>
+                    <p style="margin-top: 1rem;"><strong>Date of Birth:</strong> June 9, 2002</p>
+                    <p><strong>Location:</strong> IIT Patna, Bihar, India</p>
+                </div>
+                
+                <div class="link-card">
+                    <h3>🔗 Professional Profiles</h3>
+                    <p><strong>LinkedIn:</strong></p>
+                    <a href="https://www.linkedin.com/in/aniketrathiphysics341592" target="_blank">linkedin.com/in/aniketrathiphysics341592</a>
+                    <p style="margin-top: 1rem;"><strong>Research Interests:</strong></p>
+                
